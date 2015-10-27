@@ -1,0 +1,6 @@
+[submodule "lib/teensy-hal"]
+	path = lib/teensy-hal
+	url = https://github.com/phillyembedded/TeensyHAL.git
+[submodule "lib/hal-interface"]
+	path = lib/hal-interface
+	url = https://github.com/phillyembedded/HALinterfaces.git

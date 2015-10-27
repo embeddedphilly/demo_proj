@@ -8,12 +8,11 @@ SIZE = avr-size
 TARGET = demo
 SRC =	src/main.c \
 
-AVRSRC = ../TeensyHAL/src/TeensyGPIO.c
+AVRSRC = lib/teensy-hal/src/TeensyGPIO.c
 
 OBJDIR = ./bin
 OBJ = $(SRC:src/%.c=$(OBJDIR)/%.o)
-AVROBJ = $(AVRSRC:lib/libavr/src/%.c=$(OBJDIR)/%.o)
-BUTILOBJ = $(BUTILSRC:lib/libavr/lib/butilities/src/%.c=$(OBJDIR)/%.o)
+AVROBJ = $(AVRSRC:lib/Teensy-hal/src/%.c=$(OBJDIR)/%.o)
 
 F_CPU = 8000000
 DEBUG = dwarf-2
@@ -29,8 +28,8 @@ CFLAGS += -fshort-enums
 CFLAGS += -Wall
 CFLAGS += -Wstrict-prototypes
 CFLAGS += -std=gnu99
-CFLAGS += -I../TeensyHAL/src/
-CFLAGS += -I../HALinterfaces/headers/
+CFLAGS += -Ilib/teensy-hal/src/
+CFLAGS += -Ilib/hal-interface/headers/
 CFLAGS += -Isrc/
 
 
