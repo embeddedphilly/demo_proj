@@ -46,7 +46,7 @@ int core(void)
     CPU_PRESCALE(0x01);
     sei();
 
-    DDRB &= ~(0x04); //B2 is an input
+    DDRD &= ~(0xFF); //B2 is an input
     PORTB &= ~(0x04); //B2 has no pull-up resistor
     DDRF &= ~(0x02); //F1 is an input
     PORTF &= ~(0x02); //F1 has no pull-up resistor
@@ -55,54 +55,14 @@ int core(void)
     DDRB &= ~(0x80); //B7 is an input
     PORTB &= ~(0x80); //B7 has no pull-up resistor
 
-    DDRD |= 0x02; //D1 is an output
-    DDRC |= 0x80; //C7 is an output
-    DDRF |= 0x20; //F5 is an output
-    DDRB |= 0x10; //B4 is an output
+    DDRC |= 0xFF; //Port D is all set to output
+    DDRD |= 0x01;
+    //All on except pin 0 and pin 1 gives us an 'A'
+    // 0b11101110
 
     while (1)
     {
-        //check value of B2
-        if (PINB & 0x04)
-        {
-            PORTB |= 0x10; //set B4 to HIGH
-        }
-        else
-        {
-            PORTB &= ~(0x10); //set B4 to LOW
-        }
-
-        //check value of F1
-        if (PINF & 0x02)
-        {
-            PORTF |= 0x20; //set F5 to HIGH
-        }
-        else
-        {
-            PORTF &= ~(0x20); //set F5 to LOW
-        }
-
-        //check value of E0
-        if (PINE & 0x01)
-        {
-            PORTC |= 0x80; //set C7 to HIGH
-        }
-        else
-        {
-            PORTC &= ~(0x80); //set C7 to LOW
-        }
-
-        //check value of B7
-        if (PINB & 0x80)
-        {
-            PORTD |= 0x02; //set D1 to HIGH
-        }
-
-        else
-        {
-            PORTD &= ~(0x02); //set D1 to LOW
-        }
-
+      PORTC = ~(0xFF);
     }
     return 0;
 }
