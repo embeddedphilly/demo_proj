@@ -16,7 +16,7 @@
  ****************************************************************************/
 #include "unity.h"
 #include "SevenSegDisplay.h"
-#include "MockGPIOHAL.h"
+#include "GPIOHAL.h"
 
 /****************************************************************************
  *                      PRIVATE TYPES and DEFINITIONS                       *
@@ -49,52 +49,52 @@ void tearDown(void)
 
 void test_InitFunctionSetsUpAllGPIOPinsCorrectly(void)
 {
-  	TEST_IGNORE_MESSAGE("Implement me!");
+  	TEST_FAIL_MESSAGE("Implement me!");
 }
 
 void test_SegmentACanBeTurnedOn(void)
 {
-    TEST_IGNORE_MESSEGE("Implement me!");
+    TEST_FAIL_MESSAGE("Implement me!");
 }
 
 void test_SegmentBCanBeTurnedOn(void)
 {
-    TEST_IGNORE_MESSEGE("Implement me!");
+    TEST_FAIL_MESSAGE("Implement me!");
 }
 
 void test_SegmentCCanBeTurnedOn(void)
 {
-    TEST_IGNORE_MESSEGE("Implement me!");
+    TEST_FAIL_MESSAGE("Implement me!");
 }
 
 void test_SegmentDCanBeTurnedOn(void)
 {
-    TEST_IGNORE_MESSEGE("Implement me!");
+    TEST_FAIL_MESSAGE("Implement me!");
 }
 
 void test_SegmentECanBeTurnedOn(void)
 {
-    TEST_IGNORE_MESSEGE("Implement me!");
+    TEST_FAIL_MESSAGE("Implement me!");
 }
 
 void test_SegmentFCanBeTurnedOn(void)
 {
-    TEST_IGNORE_MESSEGE("Implement me!");
+    TEST_FAIL_MESSAGE("Implement me!");
 }
 
 void test_SegmentGCanBeTurnedOn(void)
 {
-    TEST_IGNORE_MESSEGE("Implement me!");
+    TEST_FAIL_MESSAGE("Implement me!");
 }
 
 void test_SegmentDPCanBeTurnedOn(void)
 {
-    TEST_IGNORE_MESSEGE("Implement me!");
+    TEST_FAIL_MESSAGE("Implement me!");
 }
 
 void test_DisplayCanBeTurnedOff(void)
 {
-    TEST_IGNORE_MESSEGE("Implement me!");
+    TEST_FAIL_MESSAGE("Implement me!");
 }
 
 /****************************************************************************

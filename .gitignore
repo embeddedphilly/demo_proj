@@ -1,6 +1,5 @@
 bin/*.lst
 *.hex
 *.map
-*.yml
 *.rb
 vendor/*

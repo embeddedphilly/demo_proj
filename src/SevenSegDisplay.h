@@ -20,6 +20,7 @@
 /****************************************************************************
  *                              INCLUDE FILES                               *
  ****************************************************************************/
+#include "types.h"
 
 /****************************************************************************
  *                     EXPORTED TYPES and DEFINITIONS                       *
@@ -37,7 +38,7 @@
 //Digit 2 Port / Pin Definitions
 #define D2_SEG_A_PIN GPIO_PIN5
 #define D1_SEG_B_PIN GPIO_PIN0
-#define D1_SEG_C_PIN GPIO_PIN5
+#define D1_SEG_C_PIN GPIO_PIN7
 #define D1_SEG_D_PIN GPIO_PIN4
 #define D1_SEG_E_PIN GPIO_PIN3
 #define D1_SEG_F_PIN GPIO_PIN1
